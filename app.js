@@ -85,7 +85,6 @@ async function init() {
   $('prev').onclick = () => {state.page--;render();};
   $('next').onclick = () => {state.page++;render();};
   if (!validUser.test(username)) { $('status').textContent = 'Deine Bibliothek ist vorbereitet. Trage deinen GitHub-Benutzernamen in config.js ein, um echte Projekte anzuzeigen.'; $('prev').disabled=$('next').disabled=true; return; }
-  $('profile').href = 'https://github.com/' + username; $('profile').hidden = false;
   $('status').textContent = 'Öffentliche Projekte werden geladen …';
   try {
     let page=1;
